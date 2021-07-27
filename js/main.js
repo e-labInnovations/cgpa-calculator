@@ -61,36 +61,19 @@ const openDetailedItemModal = (id) => {
   return modalElement.present();
 }
 
-const showFiles = () => {
-  const dataEl = document.getElementById('data');
-  const dataList = document.getElementById('dataList');
-  console.log(cid);
+const calculateSemCGPA = (e) => {
+  e.preventDefault();
+  const selects = document.querySelectorAll('ion-select');
+    console.log(e);
   
-  dataList.innerHTML = "";
-  
-  currentData.children.forEach(children => {
-    let newItem = document.createElement("ion-item");
-    newItem.setAttribute('href', children.id);
-    newItem.setAttribute('button', '');
-  
-    newItem.innerHTML = `
-    <ion-thumbnail slot="start">
-      <img src="${children.iconlink}">
-    </ion-thumbnail>
-    <ion-label>
-      <h3>
-        ${children.name}
-      </h3>
-      <p>
-        Uploaded On : ${children.created}
-      </p>
-      <p>
-        Credit : Unknown
-      </p>
-    </ion-label>
-    `;
-    dataList.append(newItem)
+  selects.forEach(select => {
+    if(!select.value) {
+      presentToast("Error")
+      return;
+    }
+    console.log(select.value);
   })
+  document.getElementById("cgpa-output").innerText = "6";
 }
 
 const handleItemSelect = (name) => {

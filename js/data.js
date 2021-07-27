@@ -1,5 +1,5 @@
 const EL = {
-  1: [
+  S1: [
     {code: "1001",subject: "English for Communication I",type: "F",credit: 3},
     {code: "1002",subject: "Engineering Mathematics I",type: "F",credit: 6},
     {code: "1003",subject: "Engineering Physics I",type: "F",credit: 3},
@@ -7,7 +7,7 @@ const EL = {
     {code: "1009",subject: "Health & Physical Education",type: "C",credit: 2},
     {code: "1008",subject: "Computing Fundamentals",type: "C",credit: 4},
   ],
-  2: [
+  S2: [
     {code: "2001",subject: "English for Communication II",type: "F",credit: 3},
     {code: "2002",subject: "Engineering Mathematics II",type: "F",credit: 6},
     {code: "2003",subject: "Engineering Physics II",type: "F",credit: 3},
@@ -19,7 +19,7 @@ const EL = {
     {code: "2049",subject: "Basic Electronics Lab",type: "B",credit: 2},
     {code: "2009",subject: "Life Skill",type: "C",credit: 2},
   ],
-  3: [
+  S3: [
     {code: "3043",subject: "Electrical Technology",type: "B",credit: 4},
     {code: "3044",subject: "Electronic Devices & Circuits",type: "B",credit: 5},
     {code: "3042",subject: "Digital Electronics",type: "B",credit: 4},
@@ -29,7 +29,7 @@ const EL = {
     {code: "3048",subject: "Digital Electronics Lab",type: "B",credit: 3},
     {code: "3049",subject: "Analogue Communication Lab",type: "B",credit: 3},
   ],
-  4: [
+  S4: [
     {code: "4042",subject: "Linear Integrated Circuits",type: "B",credit: 4},
     {code: "4041",subject: "Electronics Instruments & Measurements",type: "A",credit: 4},
     {code: "4043",subject: "Microcontroller and Interfacing",type: "A",credit: 5},
@@ -39,7 +39,7 @@ const EL = {
     {code: "4049",subject: "Programming in C Lab",type: "B",credit: 3},
     {code: "4009",subject: "Mini Project",type: "A",credit: 5},
   ],
-  5: [
+  S5: [
     {code: "5001",subject: "Industrial Management & Safety",type: "C",credit: 4},
     {code: "5041",subject: "Embedded System",type: "A",credit: 4},
     {code: "5042",subject: "Industrial Electronics & PLC",type: "A",credit: 4},
@@ -49,7 +49,7 @@ const EL = {
     {code: "5047",subject: "PCB & Spice Lab",type: "A",credit: 3},
     {code: "5009",subject: "Industrial Training/Industrial Visit/Collaborative work",type: "A",credit: 2},
   ],
-  6: [
+  S6: [
     {code: "6042",subject: "Communication Systems",type: "A",credit: 5},
     {code: "6043",subject: "Computer Hardware & Networking",type: "A",credit: 5},
     {code: "6041",subject: "Advanced Microprocessors",type: "A",credit: 5},

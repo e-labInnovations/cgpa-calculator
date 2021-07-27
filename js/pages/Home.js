@@ -42,63 +42,30 @@ export default class HomePage extends HTMLElement {
               </ion-header>
               
               <ion-content>
-                
-                  <ion-list>
-                    <ion-list-header>
-                      <ion-label>
-                        Data
-                      </ion-label>
-                    </ion-list-header>
-                    <div id='dataList'></div>
-                  </ion-list>
-                </div>
-                
-                <!-- Skeleton screen -->
-                <div id="skeleton">
-                
-                  <ion-list>
-                    <ion-list-header>
-                      <ion-label><h1>EL Semester 1</h2></ion-label>
-                    </ion-list-header>
-                    
-                    ${
-                    EL[1].map((subject) => { return `
-                      <ion-item>
-                        <ion-label>
-                          <h2>${subject.code}</h2>
-                          <p>${subject.subject}</p>
-                        </ion-label>
-                        <ion-select placeholder="Select One">
-                          <ion-select-option value="10">S</ion-select-option>
-                          <ion-select-option value="9">A</ion-select-option>
-                          <ion-select-option value="8">B</ion-select-option>
-                          <ion-select-option value="7">C</ion-select-option>
-                          <ion-select-option value="6">D</ion-select-option>
-                          <ion-select-option value="5">E</ion-select-option>
-                          <ion-select-option value="4">F</ion-select-option>
-                        </ion-select>
-                      </ion-item>
-                    `}).join("")
-                    }
-                      
-                  </ion-list>
-                </div>
-                
-                <ion-button color="primary" id="btn-submit" expand="block">CALCULATE</ion-button>
-				
+        
                 <ion-card>
                     <ion-card-content>
-                        <ion-grid>
-                            <ion-row>
-                                <ion-col class="ion-text-center">
-                                    <ion-text color="secondary">
-                                        <p>CGPA</p>
-                                        <h1>10</h1>
-                                    </ion-text>
-                                </ion-col>
-                                </ion-col>
-                            </ion-row>
-                        </ion-grid>
+                        <ion-item>
+                          <ion-label>Dipartment</ion-label>
+                          <ion-select placeholder="Select One" name="Dipartment">
+                            <ion-select-option value="EL">EL</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        
+                        <ion-item>
+                          <ion-label>Semester</ion-label>
+                          <ion-select placeholder="Select One" name="Semester">
+                            <ion-select-option value="S1">S1</ion-select-option>
+                            <ion-select-option value="S2">S2</ion-select-option>
+                            <ion-select-option value="S3">S3</ion-select-option>
+                            <ion-select-option value="S4">S4</ion-select-option>
+                            <ion-select-option value="S5">S5</ion-select-option>
+                            <ion-select-option value="S6">S6</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        
+                        <ion-button color="primary" expand="block">PROCEED</ion-button>
+		  
                     </ion-card-content>
                 </ion-card>
           

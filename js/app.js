@@ -1,5 +1,6 @@
 import HomePage from "./pages/Home.js"
 import AddItem from './pages/AddItem.js'
+import SemPage from './pages/Sem.js'
 
 
 const Router = document.querySelector('ion-router');
