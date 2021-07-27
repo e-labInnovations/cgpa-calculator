@@ -17,16 +17,13 @@ export default class About extends HTMLElement {
         <ion-card class="ion-text-center">
           <ion-card-header>
             <img src="/images/icons/android-chrome-512x512.png" width="150px">
-            <ion-card-title>Walleto</ion-card-title>
+            <ion-card-title>CGPA CALCULATOR</ion-card-title>
             <ion-card-subtitle>V1.0.0</ion-card-subtitle>
           </ion-card-header>
 
           <ion-card-content>
-            This application is developed by <b>Mohammed Ashad</b> for managing your wallet.
-            You can add your income and expenses with a category.
-            You can easily add, delete and modified a item. You can also add new custom category
-            with a name and icon you want. With sliding the custom added category from right to 
-            left you get an option to delete that category.
+            This application is developed by <b>Mohammed Ashad</b> for calculating CGPA of diploma (Polytechnic).
+            If your are found any bugs or problems, please report to me.
             
             <br /><br />
             <ion-button href="https://github.com/e-labinnovations" class="ion-no-padding" style="color:#211F1F;" fill="clear" target="blank_">

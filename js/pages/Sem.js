@@ -1,6 +1,8 @@
 export default class SemPage extends HTMLElement {
     connectedCallback() {
-      cid = this.id;
+      const dipartment = this.dipartment;
+      const sem = this.sem;
+      console.log(dipartment, sem);
         
         this.innerHTML = `
           <ion-header translucent>
@@ -8,21 +10,21 @@ export default class SemPage extends HTMLElement {
               <ion-buttons slot="start">
                 <ion-back-button default-href="/" id="back"></ion-back-button>
               </ion-buttons>
-              <ion-title>EL Semester 1</ion-title>
+              <ion-title>${dipartment} - ${sem}</ion-title>
             </ion-toolbar>
           </ion-header>
               
           <ion-content fullscreen>
-          <form name="semCGPA" onsubmit="return calculateSemCGPA(event);">
+          <form name="semCGPA" id="sem-form">
             <ion-list>
               ${
-              EL.S2.map((subject) => { return `
+              CGPA_Data[dipartment][sem].map((subject) => { return `
                 <ion-item>
                   <ion-label>
                     <h2>${subject.code}</h2>
                     <p>${subject.subject}</p>
                   </ion-label>
-                  <ion-select placeholder="Select One" formControlName="${subject.code}">
+                  <ion-select placeholder="Select One" name="${subject.code}">
                     <ion-select-option value="10">S</ion-select-option>
                     <ion-select-option value="9">A</ion-select-option>
                     <ion-select-option value="8">B</ion-select-option>
@@ -46,7 +48,7 @@ export default class SemPage extends HTMLElement {
                             <ion-col class="ion-text-center">
                                 <ion-text color="secondary">
                                     <p>CGPA</p>
-                                    <h1 id="cgpa-output">10</h1>
+                                    <h1 id="cgpa-output"></h1>
                                 </ion-text>
                             </ion-col>
                             </ion-col>
@@ -57,7 +59,34 @@ export default class SemPage extends HTMLElement {
       
           </ion-content>
           `;
+      
+      const semForm = document.getElementById("sem-form");
+      
+      semForm.addEventListener('submit', (e) => {
+        e.preventDefault();
         
+        var elements = e.target.elements;
+        
+        var totalGradePoint = 0;
+        var totalMark = 0;
+        
+        for (var i = 0, element; element = elements[i++];) {
+          if (element.type == 'submit') {
+            continue;
+          }
+          if (!element.value) {
+            presentToast("Error: " + element.name + " is empty")
+            return;
+          }
+          
+          const subject = CGPA_Data[dipartment][sem].find(sub => sub.code == element.name);
+          totalGradePoint += subject.credit * 10;
+          totalMark += subject.credit * parseInt(element.value);
+        }
+        
+        const cgpa = (totalMark/totalGradePoint)*10;
+        document.getElementById("cgpa-output").innerText = cgpa.toFixed(3);
+      });
     }
 }
 

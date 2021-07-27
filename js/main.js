@@ -61,21 +61,6 @@ const openDetailedItemModal = (id) => {
   return modalElement.present();
 }
 
-const calculateSemCGPA = (e) => {
-  e.preventDefault();
-  const selects = document.querySelectorAll('ion-select');
-    console.log(e);
-  
-  selects.forEach(select => {
-    if(!select.value) {
-      presentToast("Error")
-      return;
-    }
-    console.log(select.value);
-  })
-  document.getElementById("cgpa-output").innerText = "6";
-}
-
 const handleItemSelect = (name) => {
   alert(name)
 }

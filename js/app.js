@@ -1,5 +1,5 @@
 import HomePage from "./pages/Home.js"
-import AddItem from './pages/AddItem.js'
+import AboutPage from './pages/About.js'
 import SemPage from './pages/Sem.js'
 
 

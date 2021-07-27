@@ -47,14 +47,14 @@ export default class HomePage extends HTMLElement {
                     <ion-card-content>
                         <ion-item>
                           <ion-label>Dipartment</ion-label>
-                          <ion-select placeholder="Select One" name="Dipartment">
+                          <ion-select value="EL" placeholder="Select One" name="Dipartment" id="dipartment">
                             <ion-select-option value="EL">EL</ion-select-option>
                           </ion-select>
                         </ion-item>
                         
                         <ion-item>
                           <ion-label>Semester</ion-label>
-                          <ion-select placeholder="Select One" name="Semester">
+                          <ion-select value="S1" placeholder="Select One" name="Semester" id="semester">
                             <ion-select-option value="S1">S1</ion-select-option>
                             <ion-select-option value="S2">S2</ion-select-option>
                             <ion-select-option value="S3">S3</ion-select-option>
@@ -64,7 +64,7 @@ export default class HomePage extends HTMLElement {
                           </ion-select>
                         </ion-item>
                         
-                        <ion-button color="primary" expand="block">PROCEED</ion-button>
+                        <ion-button color="primary" expand="block" id="proceedBtn">PROCEED</ion-button>
 		  
                     </ion-card-content>
                 </ion-card>
@@ -79,6 +79,14 @@ export default class HomePage extends HTMLElement {
           if (menuController.isOpen()) {
             menuController.close();
           }
+        })
+        
+        const proceedBtn = document.getElementById('proceedBtn');
+        proceedBtn.addEventListener('click', () => {
+          const dipartment = document.getElementById("dipartment").value;
+          const semester = document.getElementById("semester").value;
+          
+          router.push("/"+dipartment+"/"+semester);
         })
     }
 }
