@@ -47,8 +47,12 @@ export default class HomePage extends HTMLElement {
                     <ion-card-content>
                         <ion-item>
                           <ion-label>Dipartment</ion-label>
-                          <ion-select value="EL" placeholder="Select One" name="Dipartment" id="dipartment">
-                            <ion-select-option value="EL">EL</ion-select-option>
+                          <ion-select value="${Object.keys(CGPA_Data)[0]}" placeholder="Select One" name="Dipartment" id="dipartment">
+                            ${
+                              Object.keys(CGPA_Data).map((dipartment) => { return `
+                                <ion-select-option value="${dipartment}">${dipartment}</ion-select-option>
+                              ` }).join("")
+                            }
                           </ion-select>
                         </ion-item>
                         
