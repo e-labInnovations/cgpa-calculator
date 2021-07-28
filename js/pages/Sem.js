@@ -20,11 +20,12 @@ export default class SemPage extends HTMLElement {
               ${
               CGPA_Data[dipartment][sem].map((subject) => { return `
                 <ion-item>
+                  <ion-badge slot="start">${subject.code}</ion-badge>
                   <ion-label>
-                    <h2>${subject.code}</h2>
+                    <h2>Credit: ${subject.credit}</h2>
                     <p>${subject.subject}</p>
                   </ion-label>
-                  <ion-select placeholder="Select One" name="${subject.code}">
+                  <ion-select placeholder="Select One" name="${subject.code}" id="select-${subject.code}">
                     <ion-select-option value="10">S</ion-select-option>
                     <ion-select-option value="9">A</ion-select-option>
                     <ion-select-option value="8">B</ion-select-option>
@@ -61,6 +62,14 @@ export default class SemPage extends HTMLElement {
           `;
       
       const semForm = document.getElementById("sem-form");
+      
+      CGPA_Data[dipartment][sem].forEach(sub => {
+        let customAlertOptions = {
+          header: sub.code + ' - Credit: ' + sub.credit,
+          subHeader: sub.subject,
+        }
+        document.getElementById("select-" + sub.code).interfaceOptions = customAlertOptions;
+      })
       
       semForm.addEventListener('submit', (e) => {
         e.preventDefault();
