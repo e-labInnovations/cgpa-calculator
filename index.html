@@ -16,7 +16,6 @@
     <script src="./js/main.js"></script>
     
     <!-- PWA -->
-    <!--
     <script src="./serviceWorker.js"></script>
     <link rel="manifest" href="./manifest.json" />
     <link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.png">
@@ -33,14 +32,14 @@
     <meta name="msapplication-config" content="./images/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Developed by Mohammed Ashad from e-lab innovations">
-    ->
+    
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="ZbxCMo_FVbwaa_yFwxB5veqxQSENKCz_cBG8Q0eWz-I" />
 </head>
 
 <body>
   <ion-app>
-    <ion-router use-hash="true">
+    <ion-router>
     <ion-route url="/" component="home-page"></ion-route>
     <ion-route url="/about" component="about-page"></ion-route>
     <ion-route url="/:dipartment/:sem" component="sem-page"></ion-route>

@@ -3,7 +3,7 @@ import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/io
 
 export default class HomePage extends HTMLElement {
     connectedCallback() {
-      cid = this.id;
+      let enableDarkMode = localStorage.getItem('enableDarkMode')==="true"?true:false;
         
         this.innerHTML = `
           <ion-menu side="start" content-id="main-content">
@@ -14,7 +14,17 @@ export default class HomePage extends HTMLElement {
               </ion-header>
       
               <ion-content>
-                <ion-list>
+                <ion-list class="theme-list" lines="full">
+                  <ion-item>
+                    <ion-icon slot="start" icon="moon" class="component-icon component-icon-dark"></ion-icon>
+                    <ion-label>
+                      Dark Mode
+                    </ion-label>
+                    <ion-toggle slot="end" value="dark-mode" id="dark-mode-enable" checked=${enableDarkMode}></ion-toggle>
+                  </ion-item>
+                </ion-list>
+
+                <ion-list class="home-list">
                   <ion-item href="/settings">
                     <ion-icon name="settings-outline" slot="start"></ion-icon>
                     <ion-label>Settings</ion-label>
@@ -79,13 +89,27 @@ export default class HomePage extends HTMLElement {
             
         let router = document.querySelector('ion-router');
         
+        const darkModeEnable = document.getElementById('dark-mode-enable');
+        const proceedBtn = document.getElementById('proceedBtn');
+        
         router.addEventListener("ionRouteWillChange", () => {
           if (menuController.isOpen()) {
             menuController.close();
           }
         })
         
-        const proceedBtn = document.getElementById('proceedBtn');
+        darkModeEnable.addEventListener('ionChange', e => {
+          enableDarkMode = e.detail.checked;
+          const body = document.querySelector('body');
+          localStorage.setItem('enableDarkMode', enableDarkMode);
+        
+          if (enableDarkMode) {
+            body.classList.add('dark');
+          } else {
+            body.classList.remove('dark');
+          }
+        })
+        
         proceedBtn.addEventListener('click', () => {
           const dipartment = document.getElementById("dipartment").value;
           const semester = document.getElementById("semester").value;

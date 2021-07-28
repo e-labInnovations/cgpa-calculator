@@ -1,7 +1,7 @@
 {
-  "name": "Waletto",
-  "short_name": "Waletto",
-  "description": "Money management app",
+  "name": "Poly CGPA Calculator",
+  "short_name": "CGPA Calculator",
+  "description": "Poly CGPA Calculator",
   "start_url": "./index.html",
   "display": "standalone",
   "scope": "/",
@@ -10,7 +10,7 @@
   "orientation": "natural",
   "lang": "en",
   "dir": "ltr\rtl",
-  "categories": ["Walleto", "Money", "Management", "e-lab innovations", "Ashad"],
+  "categories": ["CGPA", "Poly", "Calculator", "e-lab innovations", "Ashad"],
   "icons": [
     {
       "src": "/images/icons/android-chrome-72x72.png",
@@ -55,45 +55,45 @@
   ],
   "shortcuts": [
     {
-      "name": "Add new item",
-      "short_name": "Add",
-      "description": "Add new item to your Walleto.",
-      "url": "/#/addItem",
+      "name": "About",
+      "short_name": "About",
+      "description": "About Poly CGPA Calculator",
+      "url": "/about",
       "icons": [{ "src": "/images/add.png", "sizes": "192x192" }]
     },
     {
-      "name": "Add new category",
-      "short_name": "Add Category",
-      "description": "Add a new category item to your Walleto.",
-      "url": "/#/categories/addNew",
+      "name": "EL - S1",
+      "short_name": "EL - S1",
+      "description": "EL - Semester 1",
+      "url": "/EL/S1",
       "icons": [{ "src": "/images/add.png", "sizes": "192x192" }]
     }
   ],
   "screenshots" : [
     {
-      "src": "/images/screenshots/ss1.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpg"
+      "src": "/images/screenshots/ss1.png",
+      "sizes": "1260x2415",
+      "type": "image/png"
     },
     {
-      "src": "/images/screenshots/ss2.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpg"
+      "src": "/images/screenshots/ss2.png",
+      "sizes": "1260x2415",
+      "type": "image/png"
     },
     {
-      "src": "/images/screenshots/ss2.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpg"
+      "src": "/images/screenshots/ss2.png",
+      "sizes": "1260x2415",
+      "type": "image/png"
     },
     {
-      "src": "/images/screenshots/ss4.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpg"
+      "src": "/images/screenshots/ss4.png",
+      "sizes": "1260x2415",
+      "type": "image/png"
     },
     {
-      "src": "/images/screenshots/ss5.jpg",
-      "sizes": "720x1280",
-      "type": "image/jpg"
+      "src": "/images/screenshots/ss5.png",
+      "sizes": "862x1754",
+      "type": "image/png"
     }
   ]
 }
