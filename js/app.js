@@ -1,6 +1,7 @@
 import HomePage from "./pages/Home.js"
 import AboutPage from './pages/About.js'
 import SemPage from './pages/Sem.js'
+import DipartmentPage from './pages/Dipartment.js'
 
 
 const Router = document.querySelector('ion-router');
