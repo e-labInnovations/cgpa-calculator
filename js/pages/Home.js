@@ -1,4 +1,3 @@
-import ItemCard from "./components/ItemCard.js";
 import { menuController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
 
 export default class HomePage extends HTMLElement {
