@@ -2,7 +2,6 @@ export default class SemPage extends HTMLElement {
     connectedCallback() {
       const dipartment = this.dipartment;
       const sem = this.sem;
-      console.log(dipartment, sem);
         
         this.innerHTML = `
           <ion-header translucent>

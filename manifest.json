@@ -9,7 +9,6 @@
   "theme_color": "#ffffff",
   "orientation": "natural",
   "lang": "en",
-  "dir": "ltr\rtl",
   "categories": ["CGPA", "Poly", "Calculator", "e-lab innovations", "Ashad"],
   "icons": [
     {
@@ -51,6 +50,12 @@
     {
       "src": "/images/icons/android-chrome-512x512.png",
       "type": "image/png", "sizes": "512x512"
+    },
+    {
+      "src": "/images/icons/maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ],
   "shortcuts": [
@@ -58,14 +63,14 @@
       "name": "About",
       "short_name": "About",
       "description": "About Poly CGPA Calculator",
-      "url": "/about",
+      "url": "/#/about",
       "icons": [{ "src": "/images/add.png", "sizes": "192x192" }]
     },
     {
       "name": "EL - S1",
       "short_name": "EL - S1",
       "description": "EL - Semester 1",
-      "url": "/EL/S1",
+      "url": "/#/EL/S1",
       "icons": [{ "src": "/images/add.png", "sizes": "192x192" }]
     }
   ],
@@ -94,6 +99,14 @@
       "src": "/images/screenshots/ss5.png",
       "sizes": "862x1754",
       "type": "image/png"
+    }
+  ],
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.elabins.cgpa",
+      "id": "com.elabins.cgpa"
     }
   ]
 }

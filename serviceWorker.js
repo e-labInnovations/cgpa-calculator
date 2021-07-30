@@ -1,20 +1,17 @@
-const CACHE = "walleto-v1"
+const CACHE = "cgpa-calculator-v1"
 const offlineFallbackPage = [
   "/",
   "/index.html",
   "/css/style.css",
   "/css/variables.css",
-  "/images/offline.png",
-  "/offline.html",
   "https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css",
   "https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js",
   "https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js",
   "js/app.js",
-  "js/icons.js",
   "js/main.js",
   "js/pages/Home.js",
-  "js/pages/components/ItemCard.js",
-  "js/pages/components/DetailedItemModal.js"
+  "js/pages/Sem.js",
+  "js/pages/Dipartment.js"
   ];
 
 const self = this;
@@ -27,7 +24,7 @@ self.addEventListener("install", function (event) {
     caches.open(CACHE).then(function (cache) {
       console.log("Cached offline page during install");
 
-      if (offlineFallbackPage === "offline.html") {
+      if (offlineFallbackPage === "index.html") {
         return cache.add(new Response("Update the value of the offlineFallbackPage constant in the serviceworker."));
       }
       

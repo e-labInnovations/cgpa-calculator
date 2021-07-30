@@ -10,7 +10,7 @@ Router.addEventListener('ionRouteDidChange', (e) => {
     let routeTo = e.detail.to;
     let routerFrom = e.detail.from;
     
-    presentToast(routerFrom + ' -> ' + routeTo);
+    //presentToast(routerFrom + ' -> ' + routeTo);
 })
 
 let enableDarkMode = localStorage.getItem('enableDarkMode')==="true"?true:false;
