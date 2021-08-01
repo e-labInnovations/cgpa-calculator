@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.elabins.cgpa",
+      "sha256_cert_fingerprints": [
+        "78:D8:D9:7A:B5:FF:00:C6:B6:6E:A8:0D:FA:DE:17:79:76:DB:0C:6C:5C:B9:90:8F:4A:E6:9C:82:3A:46:A3:C0"
+      ]
+    }
+  }]
